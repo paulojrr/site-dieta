@@ -6,16 +6,14 @@ exports.register = async (req, res) => {
      const { email, password, confirm } = req.body;
 
      if (isValid(email, password, confirm)) {
-          return res.status(200).json({ result });
+          await User.findOrCreate({ where: { email: email }, defaults: { password: password } })
+               .then(([User, created]) => {
+                    res.json(User.get({
+                         plain: true
+                    }))
+                    console.log(created)
+               })
      } else {
-          return res.status(403).json({ result });
+          return res.status(403).json({ emailValid: false, passwordValid: false });
      }
 }
-
-
-
-
-
-
-
-

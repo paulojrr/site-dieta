@@ -5,9 +5,10 @@ module.exports = function (email, password, confirm) {
     if (regex.test(email)) {
         if (password.length >= 5) {
             if (password == confirm) {
-                return result = { emailValid: true, passwordValid: true }
+                return true;
             }
         }
+    } else {
+        return false;
     }
-    return result = { emailValid: false, passwordValid: false }
 }
