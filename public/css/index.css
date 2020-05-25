@@ -1,0 +1,33 @@
+html, body {
+    height: 100%;
+}
+
+.alinha_centro {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 40%;
+}
+
+form {
+    height: 350px;
+}
+
+
+.nav__title {
+    color: white;
+    margin-left: 12%;
+}
+
+.margin {
+    margin-top: 5%;
+}
+
+.bg-index {
+    background-color: #F6F6F6;
+}
+
+input:focus {
+    border-color: #28a745 !important;
+    box-shadow: none !important;
+}

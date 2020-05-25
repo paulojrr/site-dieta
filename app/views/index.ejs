@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Site Dieta</title>
+</head>
+
+<body class="bg-index">
+    <div class="nav container-fluid bg-success">
+        <div class="nav__title">
+            <h1>Dieta</h1>
+        </div>
+    </div>
+
+    <div class="d-flex justify-content-center align-items-center margin">
+        <h1 class="">Bem vindo ao site de dieta</h1>
+    </div>
+
+    <main class="col-12 margin">
+        <div class="d-flex justify-content-around flex-wrap">
+            <form action="/" method="">
+                <h2>Entrar</h2>
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input style="width: 500px" type="login-email" class="form-control" id="login-email"
+                        name="login-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="login-password" class="form-control" id="login-password" name="login-password"
+                        required>
+                </div>
+                <button type="submit" class="btn btn-success">Logar</button>
+            </form>
+
+            <form action="/register" method="POST">
+                <h2>Registrar</h2>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input style="width: 500px" type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirm">Password</label>
+                    <input type="password" class="form-control" id="confirm" name="confirm" required>
+                </div>
+                <button type="submit" class="btn btn-success">Registrar</button>
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>
