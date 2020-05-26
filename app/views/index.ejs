@@ -18,6 +18,27 @@
 
     <div class="d-flex justify-content-center align-items-center margin">
         <h1 class="">Bem vindo ao site de dieta</h1>
+
+        <div class="modal fade" id="signIn-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Erro de Cadastro</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 
     <main class="col-12 margin">
@@ -34,10 +55,10 @@
                     <input type="login-password" class="form-control" id="login-password" name="login-password"
                         required>
                 </div>
-                <button type="submit" class="btn btn-success">Logar</button>
+                <button type="button" class="btn btn-success">Logar</button>
             </form>
 
-            <form action="/register" method="POST">
+            <form id="form-signIn" action="/register" method="POST">
                 <h2>Registrar</h2>
                 <div class="form-group">
                     <label for="email">Email</label>
@@ -48,13 +69,17 @@
                     <input type="password" class="form-control" id="password" name="password" required>
                 </div>
                 <div class="form-group">
-                    <label for="confirm">Password</label>
+                    <label for="confirm">Confirmar password</label>
                     <input type="password" class="form-control" id="confirm" name="confirm" required>
                 </div>
-                <button type="submit" class="btn btn-success">Registrar</button>
+                <button type="button" class="btn btn-success signIn-modal" data-toggle="modal"
+                    data-target="#signIn-modal">Registrar</button>
             </form>
         </div>
     </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="bootstrap/bootstrap.min.js"></script>
+    <script src="validators/signInValidation.js"></script>
 </body>
 
 </html>

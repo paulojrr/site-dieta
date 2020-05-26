@@ -22,6 +22,8 @@ app.use(bodyParser.json())
 app.set('view engine', 'ejs')
 app.set('views', './app/views')
 
+// app.use(expressLayouts)
+
 // Set static route for public
 app.use(express.static(__dirname + '/public'))
 
